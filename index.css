@@ -41,6 +41,15 @@
     text-align: left;
     margin-bottom: 0;
 }
+.h2 {
+    font-family: Outfit_Bold, sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 68px;
+    letter-spacing: 0;
+    text-align: left;
+    margin-bottom: 20px;
+}
 .button_contact {
     background-color: var(--purple);
     border-radius: 16px;
@@ -184,5 +193,97 @@
     position: relative;
     left: -60px;
     bottom: 80px;
+}
+
+/* Section Howworks*/
+.section_howworks {
+    height: 636px;
+    padding-top: 8px;
+    margin-bottom: 92px;
+}
+.howworks__img {
+    margin: 0 calc(50% - 154px);
+    position: absolute;
+}
+.howworks__bg {
+    width: 2088px;
+    height: 100%;
+    z-index: -1;
+    font-family: Outfit_Bold, serif;
+    font-size: 128px;
+    font-weight: 700;
+    line-height: 136px;
+    letter-spacing: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.bg__line {
+    height: 136px;
+    width: 2088px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 25px 0;
+}
+.line__text_hollow {
+    color: transparent;
+    -webkit-text-stroke: 1px #444444;
+;
+}
+.line__text_orange {
+    color: var(--orange)
+}
+.line__text_green {
+    color: var(--green)
+}
+.line__text_purple {
+    color: var(--purple)
+}
+
+/* Section WhyBudss */
+.section_whybudss {
+
+}
+.whybudds__reasons {
+    background-color: var(--purple);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 100px;
+    padding: 5px 320px 5px 353px;
+    align-content: flex-start;
+}
+.reason__header {
+    font-family: Outfit_Bold, sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 68px;
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+.reason__descr {
+    font-family: Outfit_SemiBold, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    display: block;
+    margin-bottom: 34px;
+}
+.whybudds__header {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Outfit_SemiBold, sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 45px;
+    text-align: center;
+    max-width: 48%;
+
 }
 
