@@ -7,6 +7,21 @@
     --purple: #A64CED;
     --light-gray: #F5F5F5;
 }
+
+/*Fonts*/
+@font-face {
+    font-family: "Outfit_Bold";
+    src: url("assets/fonts/Outfit-Bold.woff") format('woff');
+}
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/fonts/Outfit-Regular.woff") format('woff');
+}
+@font-face {
+    font-family: "Outfit_SemiBold";
+    src: url("assets/fonts/Outfit-Regular.woff") format('woff');
+}
+
 /* Common elements styles*/
 .body {
     background-color: var(--dark-gray);
@@ -19,22 +34,30 @@
     cursor: pointer;
 }
 .h1 {
+    font-family: Outfit_Bold, sans-serif;
     font-size: 96px;
     font-weight: 700;
     line-height: 102px;
     text-align: left;
+    margin-bottom: 0;
 }
 .button_contact {
     background-color: var(--purple);
     border-radius: 16px;
     border: none;
-    padding: 16px 30px;
     color: var(--white);
     font-weight: 600;
     font-size: 20px;
     line-height: 25px;
+    width: 182px;
+    height: 57px;
+}
+.section {
+    margin-bottom: 100px;
 }
 
+
+/* Header*/
 .header__mode {
     background-color: var(--orange);
     font-size: 16px;
@@ -47,7 +70,7 @@
     border-radius: 20px 20px 0 0;
     color: var(--dark-gray);
     border: none;
-    padding: 9px 40px;
+    padding: 9px 37px;
 }
 .mode__button_active {
     background-color: var(--dark-gray);
@@ -62,6 +85,7 @@
 .logobox__logo {
     display: flex;
     flex-direction: row;
+    padding-top: 10px;
 }
 .logo_pic {
     max-height: 29px;
@@ -72,15 +96,25 @@
     line-height: 17px;
     text-align: center;
     padding-top: 18px;
+    margin-left: -3px;
 }
 .logomenu__button {
     margin-top: 7px;
 }
+
+/* Section Hero*/
 .section__article {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+}
+.article_hero {
+    column-gap: 330px;
 }
 .article__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
     max-width: 671px;
     font-weight: 400;
     font-size: 20px;
@@ -89,10 +123,66 @@
 }
 .article__images {
     max-height: 529px;
+    z-index: -1;
 }
 .article__image {
     position: absolute;
-    bottom: 6px;
-    right: 29px;
+    top: 203px;
+    right: 0;
+}
+.image_woman {
+    top: 178px;
+    right: 77px;
+}
+.content__text {
+    margin-bottom: 25px;
+    padding-right: 25px;
+}
+
+/*Section About*/
+.article_about {
+    display: flex;
+    flex-direction: column;
+    margin: 150px 60px;
+    row-gap: 20px;
+}
+.article__table {
+    margin-top: 55px;
+    display: grid;
+    grid-template: repeat(2, 1fr) / 525px 1fr 1fr;
+}
+.table__block_intro {
+    font-family: Outfit_SemiBold, serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 45px;
+    text-align: left;
+    max-width: 410px;
+
+}
+.table__block {
+ max-height: 360px;
+}
+.table__block_common {
+    font-family: Outfit, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    text-align: left;
+    max-width: 335px;
+    max-height: 360px;
+}
+.block_header {
+    font-family: Outfit_Bold, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 51px;
+    text-align: left;
+    margin: 0 0 20px;
+}
+.table__block_image {
+    position: relative;
+    left: -60px;
+    bottom: 80px;
 }
 
