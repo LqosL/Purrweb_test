@@ -1,14 +1,98 @@
+/* Variables */
 :root {
-    --gark-gray: #181818;
+    --dark-gray: #181818;
     --white: #FFFFFF;
     --orange: #FFAA4C;
     --green: #2FDBBC;
     --purple: #A64CED;
     --light-gray: #F5F5F5;
-
+}
+/* Common elements styles*/
+.body {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    font-family: Outfit, sans-serif;
+    letter-spacing: 0;
+    overflow-x: hidden;
+}
+.button:hover {
+    cursor: pointer;
+}
+.h1 {
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 102px;
+    text-align: left;
+}
+.button_contact {
+    background-color: var(--purple);
+    border-radius: 16px;
+    border: none;
+    padding: 16px 30px;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
 }
 
-.body {
-    background-color: var(--gark-gray);
+.header__mode {
+    background-color: var(--orange);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    padding-left: 60px;
+}
+.mode__button {
+    background-color: var(--orange);
+    border-radius: 20px 20px 0 0;
+    color: var(--dark-gray);
+    border: none;
+    padding: 9px 40px;
+}
+.mode__button_active {
+    background-color: var(--dark-gray);
     color: var(--white);
 }
+.header__logobox {
+    display: flex;
+    flex-direction: row;
+    padding: 0 60px;
+    justify-content: space-between;
+}
+.logobox__logo {
+    display: flex;
+    flex-direction: row;
+}
+.logo_pic {
+    max-height: 29px;
+}
+.logo__text {
+    font-size: 37px;
+    font-weight: 600;
+    line-height: 17px;
+    text-align: center;
+    padding-top: 18px;
+}
+.logomenu__button {
+    margin-top: 7px;
+}
+.section__article {
+    display: flex;
+    flex-direction: row;
+}
+.article__content {
+    max-width: 671px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+}
+.article__images {
+    max-height: 529px;
+}
+.article__image {
+    position: absolute;
+    bottom: 6px;
+    right: 29px;
+}
+
