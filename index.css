@@ -1,0 +1,14 @@
+:root {
+    --gark-gray: #181818;
+    --white: #FFFFFF;
+    --orange: #FFAA4C;
+    --green: #2FDBBC;
+    --purple: #A64CED;
+    --light-gray: #F5F5F5;
+
+}
+
+.body {
+    background-color: var(--gark-gray);
+    color: var(--white);
+}
