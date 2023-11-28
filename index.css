@@ -398,3 +398,58 @@
     align-items: center;
     margin-bottom: 58px;
 }
+.brand__awareness {
+    display: flex;
+    flex-direction: row;
+    font-family: Outfit, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: left;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.brand__awareness_text {
+    max-width: 537px;
+    margin:  20px 100px;
+}
+.brand__awareness_logos {
+    display: flex;
+    flex-direction: row;
+}
+.brand__awareness_medias {
+    display: grid;
+    height: fit-content;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.footer__controls {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__controls_buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer__disclaimers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.disclaimer__links {
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+
+
+
+
