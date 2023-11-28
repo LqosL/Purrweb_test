@@ -1,11 +1,13 @@
 /* Variables */
 :root {
+    --black: #000000;
     --dark-gray: #181818;
     --white: #FFFFFF;
     --orange: #FFAA4C;
     --green: #2FDBBC;
     --purple: #A64CED;
     --light-gray: #F5F5F5;
+    --gray: #CFCFCF;
 }
 
 /*Fonts*/
@@ -48,7 +50,15 @@
     line-height: 68px;
     letter-spacing: 0;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
+}
+.h3 {
+    font-family: Outfit_Bold, sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 68px;
+    letter-spacing: 0.4px;
+    margin-bottom: 35px;
 }
 .button_contact {
     background-color: var(--purple);
@@ -79,7 +89,7 @@
     border-radius: 20px 20px 0 0;
     color: var(--dark-gray);
     border: none;
-    padding: 9px 37px;
+    padding: 10px 40px;
 }
 .mode__button_active {
     background-color: var(--dark-gray);
@@ -145,14 +155,14 @@
 }
 .content__text {
     margin-bottom: 25px;
-    padding-right: 25px;
+    padding-right: 115px;
 }
 
 /*Section About*/
 .article_about {
     display: flex;
     flex-direction: column;
-    margin: 150px 60px;
+    margin: 150px 70px 150px 60px;
     row-gap: 20px;
 }
 .article__table {
@@ -167,7 +177,7 @@
     line-height: 45px;
     text-align: left;
     max-width: 410px;
-
+    letter-spacing: 0.4px;
 }
 .table__block {
  max-height: 360px;
@@ -187,7 +197,7 @@
     font-weight: 700;
     line-height: 51px;
     text-align: left;
-    margin: 0 0 20px;
+    margin: 3px 3px 18px;
 }
 .table__block_image {
     position: relative;
@@ -273,7 +283,7 @@
     margin-bottom: 34px;
 }
 .whybudds__header {
-    margin: 50px auto;
+    margin: 50px auto 22px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -284,6 +294,107 @@
     line-height: 45px;
     text-align: center;
     max-width: 48%;
-
+    letter-spacing: 0.4px;
+}
+.whybudds__stroke {
+    position: relative;
+    bottom: 47px;
+    z-index: -1;
+}
+.whybudds__table {
+    display: grid;
+    max-width: 1300px;
+    grid-gap: 20px;
+    grid-template-columns: 42.08% 12.77% 42.08%;
+    grid-template-rows: repeat(2, 362px);
+    grid-template-areas: "a a b" "c d d";
+    margin: auto;
+}
+.table__elem {
+    background-color: var(--light-gray);
+    color: var(--black);
+    border-radius: 30px;
+    font-family: Outfit, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+.elem__header {
+    font-family: Outfit_SemiBold, sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 60px;
+    text-align: left;
+    margin-top: 42px;
+    margin-bottom: 20px;
+    letter-spacing: 0.4px;
+}
+.elem_a {
+    grid-area: a;
+    background-image: url("assets/block-a__bg.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+.elem__content_a {
+    max-width: 364px;
+    margin-top: 0;
+}
+.elem_b {
+    grid-area: b;
+    background-image: url("assets/block-b__bg.png");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 40px;
+}
+.elem__content_b {
+    max-width: 416px;
+    margin-top: 0;
+}
+.elem_c {
+    grid-area: c;
+    background-image: url("assets/block-c__bg.png");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: initial;
+    padding-left: 40px;
+}
+.elem__content_c {
+    max-width: 308px;
+}
+.elem_d {
+    grid-area: d;
+    background-image: url("assets/block-d__bg.png");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 40px;
+}
+.elem__content_d {
+    max-width: 402px;
 }
 
+/* Section Brand*/
+.section_brand {
+    background-color: var(--light-gray);
+    color: var(--black);
+    padding-top: 100px;
+}
+.brand__contact {
+    border: 1px solid var(--gray);
+    border-radius: 60px;
+    margin: auto 60px;
+
+}
+.contact__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 58px;
+}
