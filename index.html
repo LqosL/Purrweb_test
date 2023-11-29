@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Business</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/x-icon" href="assets/logo.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8">
 
 </head>
@@ -29,6 +29,11 @@
                     </picture>
                     <span class="logo__text">budss</span>
                 </div>
+                <div class="burger">
+                    <div class="burger__layer"> </div>
+                    <div class="burger__layer"> </div>
+                    <div class="burger__layer"> </div>
+                </div>
                 <button class="button logomenu__button button_contact">
                     Contact sales
                 </button>
@@ -36,15 +41,18 @@
         </header >
         <article class="article section__article article_hero">
             <div class="article__content">
-                <h1 class="h1"> Everyone is&nbsp;an&nbsp;Influencer </h1>
+                <h1 class="h1"> Everyone </h1>
+                <div class="h1">is an Influencer </div>
                 <span class="content__text"> Budss is a payments as a service and WOM engine dedicated to acquisition and retention of customers to your business. </span>
                 <button class="button button_contact"> Contact sales </button>
             </div>
             <div class="article__images">
                 <picture class="article__image image_vector">
+                    <source srcset="assets/hero_vector_small.png" media="(max-width: 680px)" />
                     <img src="assets/hero_vector.png" alt="image_vector">
                 </picture>
                 <picture class="article__image image_woman">
+                    <source srcset="assets/hero_woman_small.png" media="(max-width: 680px)" />
                     <img src="assets/hero_woman.png" alt="image_woman">
                 </picture>
             </div>
@@ -61,12 +69,9 @@
                     <span>
                         Payment as a service, powered seamlessly by our
                     </span>
-                    <div  class="span_stroked about__span_stroked">
-                        <span>
+                    <span class="span_stroked about__span_stroked">
                             network of shoppers
-                        </span>
-                    </div>
-
+                    </span>
                 </div>
 
                 <div class="table__block table__block_common">
@@ -113,7 +118,7 @@
                     </svg>
                     <h2 class="block_header"> Fraud Protection </h2>
                     <span>
-                        Budss handles all payments with a&nbsp;fraud prevention algorithm to flag high risk purchases & a user set PIN code to keep payment info secure.
+                        Budss handles all payments with a&nbsp;fraud prevention algorithm to flag high risk purchases &&nbsp;a&nbsp;user set PIN code to keep payment info secure.
                     </span>
                 </div>
             </div>
@@ -122,6 +127,7 @@
 
     <section class="section section_howworks">
         <picture class="howworks__img" >
+            <source srcset="assets/howworks_phone_small.png" media="(max-width: 680px)" />
             <img src="assets/howworks_phone.png" alt="works on your phone">
         </picture>
         <div class="howworks__bg">
@@ -159,9 +165,9 @@
         <div class="whybudds__header">
             <h2 class="h2"> Why Budss </h2>
             <span> We Provide Advanced Payment Solutions</span>
-            <div class="span_stroked whybudds__span_stroked">
+            <span class="span_stroked whybudds__span_stroked">
                 To&nbsp;Grow&nbsp;Your&nbsp;Business
-            </div>
+            </span>
 
 
         </div>
@@ -194,18 +200,17 @@
         </div>
     </section>
 
-
     <section class="section section_brand section_white">
         <div class="brand__contact">
             <div class="contact__content">
-                <h3 class="h3"> Let&nbsp;&nbsp;Your Business Grow</h3>
+                <h3 class="h3"> Let Your Business Grow</h3>
                 <button class="button button_contact"> Contact sales </button>
             </div>
         </div>
         <div class="brand__awareness">
             <div class="brand__awareness_text">
-                <h1 class="h1 brand__h1"> Your Brand Awareness&nbsp;Maters</h1>
-                <span> Budss is a husle free solution to put your brand on any digital surface including Instagram, Facebook, Twitter and TikTok </span>
+                <h1 class="h1 brand__h1"> Your Brand Awareness Maters</h1>
+                <div class="brand__span"> Budss is a husle free solution to put your brand on any digital surface including Instagram, Facebook, Twitter and TikTok </div>
             </div>
             <div class="brand__awareness_medias">
                 <div class="brand__media">
@@ -297,9 +302,87 @@
         </div>
     </div>
     </section>
+
+
+
+    <div class="contact__box">
+        <form>
+            <label> Name<span class="necessary">*</span></label>
+            <input type="text" placeholder="Enter name">
+        </form>
+        <form>
+            <label> Email<span class="necessary">*</span></label>
+            <input type="email" placeholder="Enter email">
+        </form>
+        <form>
+            <label> Phone number<span class="necessary">*</span></label>
+            <input type="tel" pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?" title="+7(***)*******">
+        </form>
+        <form>
+            <label> Company <span class="necessary">*</span></label>
+            <input type="text" placeholder="Enter company">
+        </form>
+        <form>
+            <label> Website/Store URL <span class="necessary">*</span></label>
+            <input type="text" placeholder="Website/Store URL">
+        </form>
+        <form>
+            <label> Name<span class="necessary">*</span></label>
+            <input type="text" placeholder="Enter name">
+        </form>
+        <div class="contact_error-message necessary">
+            Please fill in all required fields
+        </div>
+        <div class="contact_privacy">
+            By submitting this form you are agreeing to Budss’s
+            <a href="/">Privacy Policy</a>
+            and
+            <a href="/">Terms of Use</a>
+        </div>
+        <button type="submit" disabled='true'> Contact sales</button>
+    </div>
+
+    <div class="contact__thanks-message">
+        <picture>
+            <img src="assets/contact__thanks.png" alt="Thanks!">
+        </picture>
+        <div class="contact_h1"> Thank you! </div>
+        <div> Thank you, we have received your application and will contact you soon!</div>
+        <button class="button_contact"> Super! </button>
+    </div>
+
+    <div class="burger__menu">
+        <button class="button button_contact"> Contact sales </button>
+        <div class="burger__links">
+            <a href="/"> For Business </a>
+            <a href="/"> For Customers </a>
+            <a href="/"> Privacy Policy </a>
+            <a href="/"> Terms Of Use - Seller </a>
+            <a href="/"> Terms of Use - Sellers & Customers </a>
+        </div>
+    </div>
+
 </main>
 
-<footer class="footer">
+
+<div class="cookie__box hidden">
+    <div class="cookie__close-btn">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.99978 10L13.5353 13.5355M6.46424 13.5355L9.99978 10L6.46424 13.5355ZM13.5353 6.46447L9.99978 10L13.5353 6.46447ZM9.99978 10L6.46424 6.46447L9.99978 10Z" stroke="#B9B9B9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+    <div class="cookie__content">
+        <div class="cookie__text">
+            This website uses cookies to ensure you get the best experience on our website. They also allow us to analyze user behavior in order to constantly improve the website for you.
+        </div>
+        <div class="cookie__buttons">
+            <button class="cookie__button cookie__button_accept"> Accept </button>
+            <button class="cookie__button"> Decline </button>
+        </div>
+    </div>
+</div>
+
+<footer class="footer footer_basic">
     <div class="footer__controls">
         <div class="footer__controls_logo logo footer__logo">
             <div class="logobox__logo">
@@ -336,6 +419,39 @@
             <span>Terms Of Use - Seller</span>
             <span>Terms of Use - Sellers & Customers</span>
         </div>
+    </div>
+</footer>
+
+
+<footer class="footer footer_small">
+    <div class="footer__controls">
+        <div class="footer__controls_logo logo footer__logo">
+            <div class="logobox__logo">
+                <picture class="logo_pic" >
+                    <img src="assets/logo.png" alt="logo">
+                </picture>
+                <span class="logo__text">budss</span>
+            </div>
+        </div>
+        <div class="footer__controls_links links__wrapper">
+            <a class="links__link"> For Business</a>
+            <a class="links__link"> For Customers</a>
+            <a class="links__link"> Privacy Policy</a>
+            <a class="links__link"> Term Of Use - Seller</a>
+            <a class="links__link"> Term Of Use - Seller & Customers</a>
+        </div>
+        <div class="footer__controls_buttons">
+            <button class="button button_contact"> Contact sales </button>
+            <div class="buttons_dl">
+                <button class="button button_dl dl_appstore">
+                </button>
+                <button class="button button_dl dl_googleplay">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="footer__disclaimers">
+        <span class="disclaimers__copyright">© Copyright 2023, All Rights Reserved by Budss</span>
     </div>
 </footer>
 </body>
