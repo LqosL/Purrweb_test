@@ -29,9 +29,11 @@
                     <span class="logo__text">budss</span>
                 </div>
                 <div class="burger">
-                    <div class="burger__layer"> </div>
-                    <div class="burger__layer"> </div>
-                    <div class="burger__layer"> </div>
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="10" width="24" height="2" rx="1" fill="white"/>
+                        <rect x="8" y="19" width="24" height="2" rx="1" fill="white"/>
+                        <rect x="8" y="28" width="24" height="2" rx="1" fill="white"/>
+                    </svg>
                 </div>
                 <button class="button logomenu__button button_contact">
                     Contact sales
@@ -307,31 +309,42 @@
     </div>
     </section>
 
-
-
-    <div class="contact__thanks-message">
-        <picture>
-            <img src="assets/contact__thanks.png" alt="Thanks!">
-        </picture>
-        <div class="contact_h1"> Thank you! </div>
-        <div> Thank you, we have received your application and will contact you soon!</div>
-        <button class="button_contact"> Super! </button>
-    </div>
-
-    <div class="burger__menu">
-        <button class="button button_contact"> Contact sales </button>
-        <div class="burger__links">
-            <a href="/"> For Business </a>
-            <a href="/"> For Customers </a>
-            <a href="/"> Privacy Policy </a>
-            <a href="/"> Terms Of Use - Seller </a>
-            <a href="/"> Terms of Use - Sellers & Customers </a>
-        </div>
-    </div>
-
 </main>
 
-<div class="contact__box">
+<div class="burger__menu hidden">
+    <div class="burger__menu_content">
+        <div class="burger__close-btn">
+            <svg width="40" height="40" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.99978 10L13.5353 13.5355M6.46424 13.5355L9.99978 10L6.46424 13.5355ZM13.5353 6.46447L9.99978 10L13.5353 6.46447ZM9.99978 10L6.46424 6.46447L9.99978 10Z" stroke="#B9B9B9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <button class="burger__contact-button"> Contact sales </button>
+        <div class="burger__links">
+            <a href="/" class="burger__link"> For Business </a>
+            <a href="/" class="burger__link"> For Customers </a>
+            <a href="/" class="burger__link"> Privacy Policy </a>
+            <a href="/" class="burger__link"> Terms Of Use - Seller </a>
+            <a href="/" class="burger__link"> Terms of Use - Sellers & Customers </a>
+        </div>
+    </div>
+</div>
+
+<div class="contact__thanks-message hidden">
+    <div class="contact__close-btn">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.99978 10L13.5353 13.5355M6.46424 13.5355L9.99978 10L6.46424 13.5355ZM13.5353 6.46447L9.99978 10L13.5353 6.46447ZM9.99978 10L6.46424 6.46447L9.99978 10Z" stroke="#B9B9B9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+    <picture>
+        <source srcset="assets/contact__thanks_small.png" media="(max-width: 1000px)" />
+        <img src="assets/contact__thanks.png" alt="Thanks!">
+    </picture>
+    <div class="contact_h1"> Thank you! </div>
+    <div class="contact__thanks-span"> Thank you, we have received your application and will contact you soon!</div>
+    <button class="contact__thanks-button"> Super! </button>
+</div>
+
+<div class="contact__box hidden">
     <div class="contact__close-btn">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9.99978 10L13.5353 13.5355M6.46424 13.5355L9.99978 10L6.46424 13.5355ZM13.5353 6.46447L9.99978 10L13.5353 6.46447ZM9.99978 10L6.46424 6.46447L9.99978 10Z" stroke="#B9B9B9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -447,7 +460,6 @@
         </div>
     </div>
 </footer>
-
 
 <footer class="footer footer_small">
     <div class="footer__controls">
