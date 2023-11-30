@@ -85,6 +85,13 @@
     margin-bottom: 35px;
 }
 
+.button_contact:active,
+.burger__contact-button:active,
+.contact__thanks-button:active {
+    background-color: var(--dark-purple);
+
+}
+
 .button_contact,
 .burger__contact-button,
 .contact__thanks-button {
@@ -126,7 +133,7 @@
     will-change: transform;
     z-index: -1;
     border-radius: 16px;
-    background-color: var(--dark-gray);
+    background-color: #312242;
     border: 2px solid var(--dark-purple);
     padding-top: 15px;
     color: var(--dark-gray);
@@ -144,6 +151,7 @@
 .cookie__button::after {
     height: 100%;
     width: 100%;
+    background-color: var(--dark-gray);
 }
 .button_onwhite:hover,
 .cookie__button:hover {
@@ -1356,9 +1364,6 @@
     .contact__thanks-span{
         margin: 0 -15px;
     }
-
-
-
 }
 
 
