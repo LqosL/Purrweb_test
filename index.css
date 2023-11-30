@@ -8,6 +8,7 @@
     --little-darker-gray: #444444;
     --darker-gray: #383838;
     --dark-gray: #181818;
+    --almost-black: #070707;
 
     --orange: #FFAA4C;
     --green: #2FDBBC;
@@ -168,8 +169,7 @@
 .burger,
 .burger__box,
 .burger__menu,
-.contact__thanks-message,
-.contact__box {
+.contact__thanks-message {
     display: none;
 }
 
@@ -590,7 +590,6 @@
     display: none
 }
 
-
 /* Cookie box*/
 .cookie__box {
     margin: auto 5vw;
@@ -618,6 +617,9 @@
     right:20px;
     top: 20px;
 }
+.cookie__close-btn:hover {
+    cursor: pointer;
+}
 .cookie__button {
     border: 2px solid var(--dark-purple);
     border-radius: 16px;
@@ -644,6 +646,66 @@
     letter-spacing: 0;
     text-align: left;
     max-width: 783px;
+}
+
+/* Contact box */
+.contact__box {
+    position: fixed;
+    margin: auto auto 57px;
+    top: 56px;
+    left: calc(50% - 200px);
+    display: flex;
+    flex-direction: column;
+    width: 23.8%;
+    min-height: fit-content;
+    border-radius: 20px;
+    background-color: var(--white);
+    color: var(--almost-black);
+    padding: 40px;
+}
+.contact__close-btn {
+    position: absolute;
+    right:20px;
+    top: 20px;
+}
+.contact__close-btn:hover {
+    cursor: pointer;
+}
+.contact__form {
+    display: flex;
+    flex-direction: column;
+}
+.contact__label {
+    display: flex;
+    flex-direction: column;
+    font-family: Outfit-Bold, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-align: left;
+    word-spacing: -1px;
+}
+.contact__input {
+    height: 37px;
+    border-radius: 14px;
+    border: 1px solid #F1F1F1;
+    margin-top: 3px;
+    margin-bottom: 12px;
+    padding: 0 15px;
+}
+.contact_privacy {
+    font-family: Outfit_Light, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: left;
+    margin-top: 11px;
+    margin-bottom: 19px;
+}
+.privacy_link {
+    color: var(--dark-purple);
 }
 
 @media (max-width: 1439px) {
@@ -711,6 +773,12 @@
     .article_hero {
 
     }
+    .contact__box {
+        top: 79px;
+        left: calc(50% - 20%);
+        width: 40%;
+        padding: 19px;
+    }
 }
 @media (max-width: 900px) {
     .h3 {
@@ -732,16 +800,32 @@
     .button_contact {
         align-self: center;
     }
+    /* Cookie box*/
+    .cookie__box {
+        bottom: 166px;
+        padding: 30px 20px;
+    }
+    .cookie__content {
+        flex-direction: column;
+        column-gap: 40px;
+    }
+    .cookie__buttons {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .cookie__button {
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .cookie__text {
+        margin-bottom: 40px;
+    }
 }
 
 @media (max-width: 680px) {
     /* Common elements styles*/
     .body {
-        background-color: var(--dark-gray);
-        color: var(--white);
-        font-family: Outfit, sans-serif;
-        letter-spacing: 0;
-        overflow-x: hidden;
         width: unset;
         scrollbar-gutter: stable;
     }
@@ -752,9 +836,6 @@
         line-height: 20px;
         letter-spacing: 0;
         text-align: center;
-    }
-    .button:hover {
-        cursor: pointer;
     }
     .h1 {
         font-size: 40px;
@@ -798,12 +879,6 @@
         left: calc(8%);
         z-index: -1;
     }
-    .hidden {
-        display: none!important;
-    }
-    .necessary {
-        color: var(--red);
-    }
 
     /* Header*/
     .header__mode {
@@ -830,13 +905,10 @@
         line-height: 14px;
     }
     .logomenu__button {
-        margin-top: 7px;
+        display: none;
     }
-    .burger,
     .burger__box,
-    .burger__menu,
-    .contact__thanks-message,
-    .contact__box {
+    .burger__menu {
         display: none;
     }
 
@@ -1074,7 +1146,6 @@
     .buttons_dl {
         row-gap: 19px;
     }
-
     .dl_appstore {
         background-image: url("assets/button_appstore.png");
     }
@@ -1087,69 +1158,13 @@
         margin: 37px 16px;
     }
 
-
-    /* Cookie box*/
-    .cookie__box {
-        margin: auto 5vw;
-        position: fixed;
-        background-color: var(--white);
-        bottom: 30px;
-        color: var(--darker-gray);
-        border-radius: 16px;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        padding: 30px 60px 30px 30px;
+    /* Contact box */
+    .contact__box {
+        top: 79px;
+        left: calc(50% - 45%);
+        width: 79.8%;
+        padding: 19px;
     }
-    .cookie__content {
-        display: flex;
-        flex-direction: row;
-        column-gap: 140px;
-    }
-    .cookie__buttons {
-        display: flex;
-        column-gap: 10px;
-    }
-    .cookie__close-btn {
-        position: absolute;
-        right:20px;
-        top: 20px;
-    }
-    .cookie__button {
-        border: 2px solid var(--dark-purple);
-        border-radius: 16px;
-        height: 57px;
-        background-color: transparent;
-        font-family: Outfit_SemiBold, sans-serif;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 25px;
-        letter-spacing: 0;
-        text-align: left;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    .cookie__button_accept {
-        color: var(--white);
-        background-color: var(--dark-purple);
-    }
-    .cookie__text {
-        font-family: Outfit_Light, sans-serif;
-        font-size: 20px;
-        font-weight: 300;
-        line-height: 28px;
-        letter-spacing: 0;
-        text-align: left;
-        max-width: 783px;
-    }
-
-
-
-    .logomenu__button {
-        display: none;
-    }
-
-
 
 
     /*.burger {*/
