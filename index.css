@@ -84,7 +84,10 @@
     letter-spacing: 0;
     margin-bottom: 35px;
 }
-.button_contact {
+
+.button_contact,
+.burger__contact-button,
+.contact__thanks-button {
     background-color: var(--purple);
     border-radius: 16px;
     border: none;
@@ -95,6 +98,71 @@
     width: 182px;
     height: 57px;
     padding-top: 5px;
+    transition: background-color .2s ease,border-color .2s ease,color .2s ease,fill .2s ease,transform .2s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    will-change: transform;
+}
+.button_contact:hover,
+.burger__contact-button:hover,
+.contact__thanks-button:hover {
+    transition: background-color .2s ease,border-color .2s ease,color .2s ease,fill .2s ease,transform .2s ease-in-out;
+    transform: scale(1.07);
+    will-change: transform;
+}
+.button_contact::after,
+.burger__contact-button::after,
+.contact__thanks-button::after {
+    content: "";
+    display: block;
+    height: 67%;
+    width: 98.5%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%) rotate(10deg);
+    transform-origin: top left;
+    transition: background-color .2s ease,border-color .2s ease,color .3s ease,fill .2s ease,transform .2s ease-in-out;
+    will-change: transform;
+    z-index: -1;
+    border-radius: 16px;
+    background-color: var(--dark-gray);
+    border: 2px solid var(--dark-purple);
+    padding-top: 15px;
+    color: var(--dark-gray);
+}
+.button_contact:hover::after,
+.burger__contact-button:hover::after,
+.contact__thanks-button:hover::after {
+    transform: translate(0);
+    z-index: 0;
+    color: var(--white);
+    border: 2px solid var(--dark-purple);
+}
+
+.button_onwhite::after,
+.cookie__button::after {
+    height: 100%;
+    width: 100%;
+}
+.button_onwhite:hover,
+.cookie__button:hover {
+    color: var(--white);
+    background-color: var(--dark-gray);
+    border: 2px solid var(--dark-gray);
+}
+.button_onwhite:hover::after,
+.cookie__button:hover::after {
+    border: 2px solid var(--dark-gray);
+}
+
+
+
+.contact-button__span {
+    position: relative;
+    z-index: 2;
+    color: white;
+    background-color: transparent;
 }
 .section {
     margin-bottom: 100px;
