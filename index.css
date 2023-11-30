@@ -769,12 +769,10 @@
         text-align: center;
     }
     .h3 {
-        font-family: Outfit_Bold, serif;
-        font-size: 64px;
-        font-weight: 700;
-        line-height: 68px;
-        letter-spacing: 0;
-        margin-bottom: 35px;
+        font-size: 40px;
+        line-height: 42px;
+        margin-bottom: 37px;
+        margin-top: 2px;
     }
     .button_contact {
         width: 100%;
@@ -1002,141 +1000,91 @@
 
     /* Section Brand*/
     .section_brand {
-        background-color: var(--light-gray);
-        color: var(--black);
-        padding-top: 100px;
+        padding-top: 40px;
         margin-bottom: 0;
     }
     .brand__contact {
-        border: 1px solid var(--gray);
-        border-radius: 60px;
-        margin: auto 60px;
-
+        margin: auto 16px;
+        padding: 40px 20px;
     }
     .contact__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 58px;
-    }
-    .brand__awareness {
-        display: flex;
-        flex-direction: row;
-        font-family: Outfit, sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: 0;
-        text-align: left;
-        margin-bottom: 70px;
-        justify-content: space-between;
-        align-items: center;
+        margin-bottom: 0;
     }
     .brand__awareness_text {
-        margin: 28px 38px 28px 60px;
+        margin: 42px auto 20px 16px;
     }
     .brand__h1 {
-        margin-bottom: 15px;
+        margin-bottom: 17px;
     }
     .brand__span {
-        max-width: 537px;
+        text-align: left;
+        padding-right: 55px;
+    }
+    .brand__awareness {
+        margin-bottom: 90px;
     }
     .brand__awareness_medias {
-        display: grid;
-        height: fit-content;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: repeat(4, 1fr);
-        grid-column-gap: 40px;
-        grid-row-gap: 2px;
-        margin-right: 45px;
-        margin-top: 70px;
+        grid-column-gap: 28px;
+        margin-right: 2px;
+        margin-top: 0;
     }
-    .brand__media {
-        height: 90px;
-        width: 90px;
+    .brand__media, .media_svg {
+        height: 64px;
+        width: 64px;
     }
     .brand__awareness_logos {
-        display: flex;
-        flex-direction: row;
-        column-gap: 90px;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 94px;
-    }
-    .brand__logo {
-
+        justify-content: space-between;
+        padding-bottom: 85px;
+        row-gap: 24px;
+        margin: 20px 29px auto 20px;
     }
 
     /* Footer */
-    .footer {
-        height: 128px;
-        margin: 40px 60px 20px 60px;
-    }
-    .footer__controls {
-        display: flex;
-        flex-direction: row;
-        height: 57px;
-        justify-content: space-between;
-        align-items: center;
+    .footer_basic {
+        display: none;
     }
     .footer__logo {
-        margin-top: -24px;
-    }
-    .footer__controls_buttons {
-        display: flex;
-        flex-direction: row;
-        column-gap: 40px;
-    }
-    .links__wrapper {
-        display: flex;
-        column-gap: 40px;
-        margin-left: 10px;
-        margin-top: 5px;
-    }
-    .links__link {
-        font-family: Outfit_Medium, sans-serif;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 25px;
-        letter-spacing: 0;
-        text-align: center;
-    }
-    .buttons_dl {
-        display: flex;
-        column-gap: 20px;
-    }
-    .button_dl {
-        padding: 0;
-        height: 57px;
-        width: 195px;
-        background-color: transparent;
-        border: none;
-    }
-    .footer__disclaimers {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 40px;
-        border-top: 2px solid var(--little-darker-gray);
-        margin-top: 28px;
-        align-items: flex-end;
-        font-family: Outfit_Light, sans-serif;
-        font-size: 14px;
-        font-weight: 300;
-        line-height: 20px;
-        letter-spacing: 0;
-        text-align: left;
-        padding-top: 2px;
-    }
-    .disclaimers__links {
-        display: flex;
-        flex-direction: row;
-        column-gap: 20px;
-        text-decoration: underline;
+        margin-top: 4px;
+        margin-bottom: 48px;
     }
     .footer_small {
-        display: none
+        display: unset;
+        margin-left: 0;
+    }
+    .links__wrapper{
+        margin-left: 16px;
+        margin-bottom: 21px;
+    }
+    .links__link {
+        text-align: left;
+        margin-bottom: 16px;
+    }
+    .footer__contact {
+        max-width: 182px;
+        margin-left: 0px;
+    }
+    .footer__controls {
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .footer__controls_buttons {
+        flex-direction: column;
+        row-gap: 42px;
+    }
+    .buttons_dl {
+        row-gap: 19px;
+    }
+
+    .dl_appstore {
+        background-image: url("assets/button_appstore.png");
+    }
+    .dl_googleplay {
+        background-image: url("assets/button_googleplay.png");
+    }
+    .footer__disclaimers {
+        justify-content: flex-start;
+        height: 31px;
+        margin: 37px 16px;
     }
 
 
@@ -1202,38 +1150,7 @@
     }
 
 
-    /*.footer_basic {*/
-    /*    display: none;*/
-    /*}*/
-    /*.footer_small {*/
-    /*    display: unset;*/
-    /*    font-family: Outfit_Medium, sans-serif;*/
-    /*    font-size: 20px;*/
-    /*    font-weight: 500;*/
-    /*    line-height: 25px;*/
-    /*    letter-spacing: 0px;*/
 
-    /*}*/
-    /*.links__link {*/
-    /*    text-align: left;*/
-    /*}*/
-    /*.footer__controls {*/
-    /*    flex-direction: column;*/
-    /*    align-items: baseline;*/
-    /*}*/
-    /*.footer__controls_buttons {*/
-    /*    flex-direction: column;*/
-    /*}*/
-    /*.button_dl {*/
-    /*    width: 194px;*/
-    /*    height: 57px;*/
-    /*}*/
-    /*.dl_appstore {*/
-    /*    background-image: url("assets/button_appstore.png");*/
-    /*}*/
-    /*.dl_googleplay {*/
-    /*    background-image: url("assets/button_googleplay.png");*/
-    /*}*/
 
     /*.burger {*/
     /*    width: 24px;*/
