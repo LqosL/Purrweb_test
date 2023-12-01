@@ -1132,9 +1132,14 @@
         right: 14px;
         top: 53px;
     }
+    .burger:hover,
+    .burger__close-btn:hover {
+        cursor: pointer;
+    }
     .burger__box {
         display: none;
     }
+    .
 
     /* Section Hero*/
     .section_hero {
