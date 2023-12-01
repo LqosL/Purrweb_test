@@ -59,6 +59,10 @@
 .button:hover {
     cursor: pointer;
 }
+.button:disabled, .button:hover:disabled {
+    background-color: #B9B9B9!important;
+    cursor: unset!important;
+}
 .h1 {
     font-family: Outfit_Bold, sans-serif;
     font-size: 96px;
@@ -130,14 +134,14 @@
     overflow: hidden;
     will-change: transform;
 }
-.button_contact:hover,
+.button_contact:hover:not(:disabled),
 .burger__contact-button:hover,
 .contact__thanks-button:hover {
     transition: background-color .2s ease,border-color .2s ease,color .2s ease,fill .2s ease,transform .2s ease-in-out;
     transform: scale(1.07);
     will-change: transform;
 }
-.button_contact::after,
+.button_contact::after:not(:disabled),
 .burger__contact-button::after,
 .contact__thanks-button::after {
     content: "";
@@ -698,13 +702,15 @@
     margin: auto 5vw;
     position: fixed;
     background-color: var(--white);
-    bottom: 30px;
+    bottom: calc(-100vh + 30px);
     color: var(--darker-gray);
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     align-self: center;
     padding: 30px 60px 30px 30px;
+    z-index: 6;
+    transition-duration: 1s;
 }
 .cookie__content {
     display: flex;
@@ -765,6 +771,7 @@
     background-color: var(--white);
     color: var(--almost-black);
     padding: 40px;
+    z-index: 6;
 }
 .contact__close-btn {
     position: absolute;
@@ -823,7 +830,7 @@
     font-size: 24px;
     font-weight: 400;
     line-height: 29px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     text-align: center;
     border-radius: 20px;
 }
@@ -850,6 +857,10 @@
     width: 97%;
     height: 57px;
     padding-top: 5px;
+}
+.input_error {
+    margin-top: -8px;
+    margin-bottom: 10px;
 }
 
 .burger__menu {
@@ -890,7 +901,7 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 25px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     text-align: left;
     color: var(--white);
     text-decoration: none;
@@ -998,7 +1009,7 @@
     }
     /* Cookie box*/
     .cookie__box {
-        bottom: 166px;
+        bottom: calc( -100vh + 166px);
         padding: 30px 20px;
     }
     .cookie__content {
@@ -1340,7 +1351,7 @@
     }
     .footer__contact {
         max-width: 182px;
-        margin-left: 0px;
+        margin-left: 0;
     }
     .footer__controls {
         flex-direction: column;
@@ -1397,7 +1408,6 @@
     }
 }
 
-
 /* Animation */
 .bg__line_rtl{
     animation: rtl 15s linear infinite;
@@ -1408,7 +1418,6 @@
     animation: ltr 15s linear infinite;
     -moz-animation: moz_ltr 15s linear infinite;
 }
-
 @media (max-width: 680px) {
     .bg__line_rtl{
         animation: rtl 15s linear infinite;

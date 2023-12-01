@@ -380,26 +380,26 @@
                 Name
                 <span class="necessary">*</span>
             </span>
-            <input class="contact__input" type="text" placeholder="Enter name">
-            <span class="necessary hidden"> This field is required</span>
+            <input class="contact__input required" type="text" placeholder="Enter name">
+            <span class="necessary hidden input_error"> This field is required</span>
         </label>
 
         <label class="contact__label">
             <span>
                 Email
-                <span class="necessary">*</span>
+                <span class="necessary ">*</span>
             </span>
-            <input class="contact__input" type="email" placeholder="Enter email">
-            <span class="necessary hidden"> This field is required</span>
+            <input class="contact__input required" type="email" placeholder="Enter email">
+            <span class="necessary hidden input_error"> This field is required</span>
         </label>
 
         <label class="contact__label">
             <span>
                 Phone number
-                <span class="necessary">*</span>
+                <span class="necessary input_error">*</span>
             </span>
-            <input class="contact__input" type="tel" pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?" title="+7(***)*******">
-            <span class="necessary hidden"> This field is required</span>
+            <input class="contact__input required phone_input" type="tel" pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?" title="+7(***)*******">
+            <span class="necessary hidden input_error"> This field is required</span>
         </label>
 
         <label class="contact__label">
@@ -425,7 +425,7 @@
         <a href="/" class="privacy_link">Terms of Use</a>
     </div>
 
-    <button type="submit" disabled='true' class="button button_contact">
+    <button class="button button_contact contact__submit">
         <span class="contact-button__span">
            Contact sales
         </span>
@@ -532,5 +532,6 @@
         <span class="disclaimers__copyright">© Copyright 2023, All Rights Reserved by Budss</span>
     </div>
 </footer>
+<script type="application/javascript" src="index.js"></script>
 </body>
 </html>
