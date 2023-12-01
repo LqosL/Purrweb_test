@@ -375,6 +375,7 @@
 .howworks__img {
     margin: 0 calc(50% - 154px);
     position: absolute;
+    z-index: 5;
 }
 .howworks__bg {
     width: 2088px;
@@ -395,7 +396,7 @@
 }
 .bg__line {
     height: 136px;
-    width: 2088px;
+    /*width: 2088px;*/
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -1197,10 +1198,11 @@
         line-height: 51px;
         letter-spacing: 0;
         text-align: left;
+        z-index: -1;
     }
     .bg__line {
         height: 150px;
-        width: 1204px;
+        /*width: 1204px;*/
         margin: -60px 0;
     }
 
@@ -1396,4 +1398,32 @@
 }
 
 
-
+/* Animation */
+.bg__line_rtl{
+    animation: rtl_big 15s linear infinite;
+}
+.bg__line_ltr{
+    animation: ltr_big 15s linear infinite;
+}
+@keyframes ltr_big {
+    0% {
+        transform: translate(-20px, 0);;
+    }
+    50% {
+        transform: translate(-50%, 0);
+    }
+    100% {
+        transform: translate(-100%, 0)
+    }
+}
+@keyframes rtl_big {
+    0% {
+        transform: translate(-100%, 0);
+    }
+    50% {
+        transform: translate(-50%, 0);
+    }
+    100% {
+        transform: translate(-20px, 0);
+    }
+}
