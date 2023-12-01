@@ -862,6 +862,13 @@
     margin-top: -8px;
     margin-bottom: 10px;
 }
+.phone_input {
+    background-image: url("assets/flag_rus.png");
+    background-repeat: no-repeat;
+    background-position-x: 15px;
+    background-position-y: center;
+    padding: 0 40px;
+}
 
 .burger__menu {
     width: 100%;

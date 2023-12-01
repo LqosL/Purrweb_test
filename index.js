@@ -16,25 +16,75 @@ function validatePhone (phone) {
     return regex.test(phone);
 }
 
+function phoneMask(element, string) {
+    function removeGaps(string){
+        let result = '';
+        const letterless = string.replaceAll(/[^\d+]/g, '')
+        const gapless =  letterless.replaceAll(' ', '')
+        if (gapless.length > 12) {
+            result = gapless.slice(0, 12)
+        } else {
+            result = gapless;
+        }
+        if (result.length === 1 && result.slice(0,1) !== '+' && result.slice(0,1) !== '8'){
+            result = ''
+        }
+        if (result.length === 2 && result.slice(0,1) === '+' && (result.slice(1,2) !== '7')) {
+            result = '+'
+        }
+        if (result.slice(0,2) === '+7' && (result.length > 2 && !/[3489]/.test(result.substring(2, 3)))){
+            result = result.slice(0, -1)
+        }
+
+        if (result.slice(0,1) === '8' && (result.length > 1 && !/9/.test(result.substring(1, 2)))){
+            console.log('look here')
+            result = result.slice(0, -1)
+        }
+        return result
+    }
+    function addGaps(string) {
+        if (string.slice(0,1) === '+') {
+            if (string.slice(2,3) === '3' || string.slice(2,3) === '4' || string.slice(2,3) === '8'){
+                return (string.substring(0,2) + ' ' + string.substring(2, 6)  + ' ' + string.substring(6, 8) + ' ' + string.substring(8, 10) + ' ' + string.substring(10)).trim();
+            }
+            return (string.substring(0,2) + ' ' + string.substring(2, 5)  + ' ' + string.substring(5, 8) + ' ' + string.substring(8, 10) + ' ' + string.substring(10)).trim();
+        }
+        if (string.slice(0,1) === '8') {
+            return (string.substring(0,1) + ' ' + string.substring(1, 4)  + ' ' + string.substring(4, 8) + ' ' + string.substring(8, 10) + ' ' + string.substring(10)).trim();
+        }
+        return ''
+    }
+    element.value = addGaps(removeGaps(string));
+}
+
 function validateForm(form) {
     const error_message = document.getElementsByClassName('contact_error-message')[0];
 
     const required = Array.from(form.getElementsByClassName('required'));
     required.forEach((block)=>{
         const value = block.value;
+        const siblings = block.parentElement.children;
         if (value.length === 0) {
-            error_message.classList.remove('hidden');
-            const siblings = block.parentElement.children;
             siblings.item(siblings.length -1 ).classList.remove('hidden');
+            error_message.classList.remove('hidden');
+        } else {
+            siblings.item(siblings.length -1 ).classList.add('hidden');
         }
     })
 
     const phone_input = form.getElementsByClassName('phone_input')[0];
+    const siblings = phone_input.parentElement.children;
+    const phoneError = siblings.item(siblings.length -1 );
+    if (phone_input.value.length === 0) {
+        phoneError.innerText = 'This field is required';
+        phoneError.classList.remove('hidden');
+        return;
+    }
     if (!validatePhone(phone_input.value)) {
-        const siblings = block.parentElement.children;
-        const phoneError = siblings.item(siblings.length -1 );
         phoneError.innerText = 'incorrect number';
         phoneError.classList.remove('hidden');
+    } else {
+        phoneError.classList.add('hidden');
     }
 }
 
@@ -87,6 +137,9 @@ window.addEventListener('load', ()=> {
         validateForm(form);
     })
 
-
+    const phone_input = form.getElementsByClassName('phone_input')[0];
+    phone_input.addEventListener('input', ()=> {
+        phoneMask(phone_input, phone_input.value)
+    })
 });
 
