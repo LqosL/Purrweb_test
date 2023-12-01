@@ -182,7 +182,6 @@
 .cookie__button:hover {
     color: var(--white);
     background-color: var(--dark-gray);
-    /*border: 2px solid var(--dark-gray);*/
 }
 .button_onwhite:hover::after,
 .cookie__button:hover::after {
@@ -396,7 +395,6 @@
     flex-wrap: nowrap;
     justify-content: space-evenly;
     overflow-x: hidden;
-    text-wrap: none;
 }
 .bg__line {
     height: 136px;
@@ -1000,7 +998,7 @@
     }
     .whybudds__reasons {
         column-gap: 10vw;
-        padding: 5px unset;
+        padding: 5px 0;
     }
     .buttons_dl {
         flex-direction: column;
@@ -1046,7 +1044,6 @@
     /* Common elements styles*/
     .body {
         width: unset;
-        scrollbar-gutter: stable;
     }
     .button {
         font-family: Outfit_Medium, sans-serif;
@@ -1139,7 +1136,7 @@
     .burger__box {
         display: none;
     }
-    .
+
 
     /* Section Hero*/
     .section_hero {

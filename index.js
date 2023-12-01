@@ -134,7 +134,6 @@ window.addEventListener('load', ()=> {
     const submit_button = document.getElementsByClassName('contact__submit')[0];
     submit_button.disabled = true;
 
-
     const fields = Array.from(document.getElementsByClassName('contact__input '));
     fields.forEach((field)=> {
         addEventListener('input', ()=>{
@@ -145,8 +144,6 @@ window.addEventListener('load', ()=> {
             submit_button.disabled = false;
         })
     })
-
-
 
     const phone_input = form.getElementsByClassName('phone_input')[0];
     phone_input.addEventListener('input', ()=> {
@@ -166,7 +163,6 @@ window.addEventListener('load', ()=> {
     submit_button.addEventListener('click', ()=> {
         validateForm(form);
     })
-
 
     const burger = document.getElementsByClassName('burger')[0];
     const burger_close = document.getElementsByClassName('burger__close-btn')[0];
