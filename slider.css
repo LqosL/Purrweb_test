@@ -4,8 +4,9 @@
 }
 .slider {
     border-radius: 30px;
-    margin: 10vh auto auto;
-    height: 80vh;
+    margin: 20vh auto ;
+    padding: 50px 20px;
+    height: fit-content;
     width: 75vw;
     background: linear-gradient(180deg, rgba(2,0,171,0.46262254901960786) 0%, rgba(221,223,223,1) 83%);
     display: flex;
@@ -19,21 +20,23 @@
 }
 
 .slider__viewport {
+    overflow: hidden;
+    display: flex;
+    border-radius: 30px;
+    margin: 50px auto;
+    border: 3px solid white;
+}
+.slider__viewport {
     width: 30vw;
     max-width: 400px;
     min-width: 350px;
     height: 40vh;
     max-height: 600px;
-
-    overflow: hidden;
-    display: flex;
-
-    background-color: #A64CED;
-    border-radius: 30px;
-
-    margin: 50px auto;
 }
-
+.picture_current {
+    height: 100%;
+    width: 100%;
+}
 .slider__nav {
     display: flex;
     justify-content: space-around;
@@ -75,12 +78,15 @@
         flex-wrap: wrap;
     }
     .slider__viewport {
-        max-height: 700px;
-        max-width: 500px;
-        min-width: 350px;
+        flex-wrap: nowrap;
         order: 3;
     }
 
+    .slider__viewport {
+        max-height: 700px;
+        max-width: 500px;
+        min-width: 350px;
+    }
     .slider__arrow {
         margin: 30px 20px 20px;
     }
@@ -100,20 +106,22 @@
         justify-content: space-evenly;
         align-items: center;
     }
-    .slider__viewport {
+    .slider__viewport{
         max-height: 400px;
         max-width: 300px;
-
     }
+
 }
 
 @media (max-width: 500px) {
-    .slider__viewport {
+    .slider__viewport
+    {
         height: 70vw;
         width: 50vw;
         min-height: unset;
         min-width: unset;
     }
+
 }
 
 @media (max-width: 350px) {
@@ -123,4 +131,25 @@
         border-radius: 20px;
         margin: 30px auto;
     }
+}
+
+
+
+.picture_prev {
+    background-image: url("assets/slider_images/0.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.picture_current{
+    background-image: url("assets/slider_images/1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.picture_next {
+    background-image: url("assets/slider_images/1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }

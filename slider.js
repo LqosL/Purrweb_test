@@ -1,13 +1,6 @@
-const Directions = {
-    0: "FORWARD",
-    1: "BACKWARD"
-}
+// import Slider from './slider_class';
 
-function backgroundChanger(currentLink, direction) {
-
-}
-
-
+import Slider from "./slider_class.js" ;
 
 const picturesLinks = [
     'assets/slider_images/0.jpg',
@@ -21,3 +14,10 @@ const picturesLinks = [
     'assets/slider_images/8.jpg',
     'assets/slider_images/9.jpg',
 ]
+window.addEventListener('load', ()=> {
+    const slider = new Slider(picturesLinks);
+    const sliderElement = slider.element;
+    slider.fillSlider(sliderElement)
+    document.body.appendChild(sliderElement)
+
+});
