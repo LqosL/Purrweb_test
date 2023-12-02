@@ -82,6 +82,7 @@
     background-color: rgba(239, 127, 221, 0.65);
 }
 
+
 @media (max-width: 720px) {
     .slider__wrapper {
         flex-wrap: wrap;
