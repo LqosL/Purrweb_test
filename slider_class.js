@@ -66,7 +66,7 @@ export default class Slider {
         pictures_film.children[2].style.backgroundImage = `url("${this.links[this.nextPage]}")`;
     }
 
-    slide(direction) {
+    slide(direction, interactionMS = 300) {
         const navBlock = document.getElementsByClassName('slider__nav')[0];
         const buttons = Array.from(document.getElementsByClassName('button'));
         buttons.forEach((button)=>{
@@ -74,54 +74,30 @@ export default class Slider {
         });
 
         const pictures_film = document.getElementsByClassName('pictures_film')[0];
-        const interactionMS = 300;
         const startPoint = Date.now();
-        if (direction === Directions.left) {
-            let counterID = setInterval(() => {
-                const currPoint = Date.now();
-                if (currPoint >= startPoint + interactionMS) {
-                    clearInterval(counterID);
-                    if (this.sliding === false) {
-                        buttons.forEach((button) => {
-                            button.removeAttribute('disabled');
-                        });
-                    }
-                            this.backgroundIndexCounter(Directions.left)
-                            pictures_film.children[0].style.backgroundImage = `url("${this.links[this.prevPage]}")`;
-                            pictures_film.children[1].style.backgroundImage = `url("${this.links[this.currPage]}")`;
-                            pictures_film.children[2].style.backgroundImage = `url("${this.links[this.nextPage]}")`;
-                            pictures_film.style.transform = `translate(0, 0)`
-                            this.redrawNavs(navBlock);
-                }else{
-                    const timePassed = currPoint - startPoint;
-                    const done =  (timePassed / interactionMS) * 100;
-                    pictures_film.style.transform = `translate(${done * 0.333}%, 0)`
+
+        const k = direction === Directions.right ? -1 : 1;
+        let counterID = setInterval(() => {
+            const currPoint = Date.now();
+            if (currPoint >= startPoint + interactionMS) {
+                clearInterval(counterID);
+                if (this.sliding === false) {
+                    buttons.forEach((button) => {
+                        button.removeAttribute('disabled');
+                    });
                 }
-            }, 1);
-        }
-        if (direction === Directions.right) {
-            let counterID = setInterval(() => {
-                const currPoint = Date.now();
-                if (currPoint >= startPoint + interactionMS) {
-                    clearInterval(counterID);
-                    if (this.sliding === false) {
-                        buttons.forEach((button) => {
-                            button.removeAttribute('disabled');
-                        });
-                    }
-                    this.backgroundIndexCounter(Directions.right)
-                    pictures_film.children[0].style.backgroundImage = `url("${this.links[this.prevPage]}")`;
-                    pictures_film.children[1].style.backgroundImage = `url("${this.links[this.currPage]}")`;
-                    pictures_film.children[2].style.backgroundImage = `url("${this.links[this.nextPage]}")`;
-                    pictures_film.style.transform = `translate(0, 0)`
-                    this.redrawNavs(navBlock);
-                }else{
-                    const timePassed = currPoint - startPoint;
-                    const done =  (timePassed / interactionMS) * 100;
-                    pictures_film.style.transform = `translate(-${done * 0.333}%, 0)`
-                }
-            }, 1);
-        }
+                this.backgroundIndexCounter(direction)
+                pictures_film.children[0].style.backgroundImage = `url("${this.links[this.prevPage]}")`;
+                pictures_film.children[1].style.backgroundImage = `url("${this.links[this.currPage]}")`;
+                pictures_film.children[2].style.backgroundImage = `url("${this.links[this.nextPage]}")`;
+                pictures_film.style.transform = `translate(0, 0)`
+                this.redrawNavs(navBlock);
+            }else{
+                const timePassed = currPoint - startPoint;
+                const done =  (timePassed / interactionMS) * 100;
+                pictures_film.style.transform = `translate(${k * done * 0.333}%, 0)`
+            }
+        }, 1);
     }
 
     redrawNavs(element) {
@@ -142,28 +118,24 @@ export default class Slider {
 
     moveTo(picNum) {
         if (this.currPage === picNum) return;
-
         this.sliding = true;
-
         const buttons = Array.from(document.getElementsByClassName('button'));
         buttons.forEach((button)=>{
             button.disabled = true;
         });
 
         const navBlock = document.getElementsByClassName('slider__nav')[0];
-
         const currPic = this.currPage;
         const goalPic = picNum ;
-
         let direction;
         (currPic > picNum) ? direction = Directions.left : direction = Directions.right;
 
         const steps = Math.abs(currPic - goalPic);
         let counter = 0;
+        const slidingTime = 300;
         let mover = setInterval(()=>{
             if (counter < steps) {
-                console.log('step', counter)
-                this.slide(direction);
+                this.slide(direction, slidingTime);
                 counter++;
             } else {
                 clearInterval(mover)
@@ -173,7 +145,7 @@ export default class Slider {
                 });
                 this.redrawNavs(navBlock);
             }
-        }, 400)
+        }, slidingTime)
     }
 
     fillSlider(element) {
@@ -234,7 +206,6 @@ export default class Slider {
         this.backgroundIndexCounter(Directions.none)
         this.placeBackgrounds(element)
     }
-
 }
 
 
