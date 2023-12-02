@@ -10,7 +10,7 @@ const picturesLinks = [
     'assets/slider_images/4.jpg',
     'assets/slider_images/5.jpg',
     'assets/slider_images/6.jpg',
-    'assets/slider_images/7.jpg',
+    'assets/slider_images/7.webp',
     'assets/slider_images/8.jpg',
     'assets/slider_images/9.jpg',
 ]
@@ -19,5 +19,6 @@ window.addEventListener('load', ()=> {
     const sliderElement = slider.element;
     slider.fillSlider(sliderElement)
     document.body.appendChild(sliderElement)
+
 
 });
