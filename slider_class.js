@@ -141,6 +141,8 @@ export default class Slider {
     }
 
     moveTo(picNum) {
+        if (this.currPage === picNum) return;
+
         this.sliding = true;
 
         const buttons = Array.from(document.getElementsByClassName('button'));
